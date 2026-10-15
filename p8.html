@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pet Sphere - Responsive Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: violet;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid lightblue;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: purple;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: purple;
+            font-size: 22px;
+        }
+
+        p {
+            color: black;
+            font-size: 15px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Pet Care and Pet Products Layout */
+
+        .layout {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .box {
+            flex: 1;
+            min-width: 0;
+            padding: 15px;
+            border: 1px solid lightgray;
+            background-color: pink;
+            border-radius: 8px;
+        }
+
+        .box h3 {
+            color: darkblue;
+        }
+
+        /* Responsive Image Gallery */
+
+        .gallery-title {
+            text-align: center;
+            color: black;
+            margin-top: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: gray;
+            margin-top: 20px;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        /* Tablet Screen */
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery img {
+                height: 120px;
+            }
+        }
+
+        /* Mobile Screen */
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .main-image {
+                height: 180px;
+            }
+
+            .layout {
+                flex-direction: column;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .gallery img {
+                height: 100px;
+            }
+
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Main Heading -->
+
+        <h1>Pet Sphere</h1>
+
+        <!-- Introduction -->
+
+        <h2>Welcome to Pet Sphere</h2>
+
+        <p>
+            Pet Sphere is a friendly place for pet lovers.
+            We provide information about pet care, healthy food,
+            grooming, and pet accessories. Our goal is to keep
+            every pet happy, healthy, and safe.
+        </p>
+
+        <!-- Pet Care and Pet Products -->
+
+        <div class="layout">
+
+            <div class="box">
+                <h3>Pet Care</h3>
+
+                <p>
+                    Learn about daily care, exercise,
+                    hygiene, and health for your pets.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Pet Products</h3>
+
+                <p>
+                    Discover pet food, toys, beds,
+                    collars, and other useful accessories.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Responsive Image Gallery -->
+
+        <h2 class="gallery-title">Responsive Image Gallery</h2>
+
+        <div class="gallery">
+
+            <img src="pet.jpg" alt="Pet 1">
+            <img src="pet.jpg" alt="Pet 2">
+            <img src="pet.jpg" alt="Pet 3">
+            <img src="pet.jpg" alt="Pet 4">
+            <img src="pet.jpg" alt="Pet 5">
+            <img src="pet.jpg" alt="Pet 6">
+            <img src="pet.jpg" alt="Pet 7">
+            <img src="pet.jpg" alt="Pet 8">
+
+        </div>
+
+        <!-- Footer -->
+
+        <footer>
+            <p>Pet Sphere - Love, Care and Happiness</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
